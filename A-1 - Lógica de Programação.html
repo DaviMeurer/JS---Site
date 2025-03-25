@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script>
+       /// 1. Comentário de várias linhas
+
+        //Pop-up na tela
+        alert("Olá Mundo!")
+        console.log("Olá Mundo!")
+
+        //são variaveis mutáveis.
+        var nome="João"
+        let sobrenome = "Developer"
+
+        //não altera o valor
+        const idade = 23
+        console.log("idade:"+idade)
+        //idade = 25 //!!! erro !!!
+        console.log("idade:"+idade)
+
+       /// 2. Tipos de dados
+
+        //String (Texto), number (números), boolean(Verdadeiro e falso)
+        let preco = 19.99
+        let descricao = "X-bacon"
+
+       /// 3. Operações Aritméticas, Lógicas e Atribuitívas 
+        let resultadoE = (10>5) && (8<15)
+        let resultadoOU = (10>5) || (8<15)
+
+        let igual = 5 == "5" //true
+        let igualTipagem = 5 === "5" //false
+        console.log(igual, igualTipagem)
+
+       /// 4. Condicionais
+        if (idade<18){
+            console.log("Menor de idade")
+        }
+        else{
+            console.log("Maior de idade")
+        }
+
+        //estrutura de repetição
+        for (let i = 0; i<5; i++){
+            console.log(i+", ")
+        }
+
+        let contador = 0
+        while(contador<5){
+            console.log(contador)
+            contador++;
+        }
+
+       /// 5. Funções
+        function multiplicar(a, b){
+            return a * b
+        }
+        console.log(multiplicar(10, 2))
+
+        //função anônima atribuída à uma variável
+        let divisao = function(a, b){
+            return a/b
+        }
+        console.log(divisao(2, 8))
+        
+        //função Arrow
+        let divisao2 = (a, b) => a/b
+        console.log(divisao2(20, 2))
+
+       /// 6. Estrutura de dados
+        //Array
+        let frutas = ["Laranja", "Banana", "Maçã"]
+        console.log(frutas)
+        console.log(frutas[1])
+
+        for (let i = 0; i < frutas.length; i++){
+            console.log(i, frutas[i])
+        }
+
+       /// 7. Objeto, coleção de dados
+        let pessoa = {
+            nome: nome,
+            idade: 23,
+            cidade: "São Paulo"
+        }
+
+        console.log(pessoa.nome)
+        console.log(pessoa["cidade"])
+
+        pessoa.profissao="Desenvolvedor" //adicionando uma posição
+        console.log(pessoa.profissao)
+
+       /// 8. Múltiplas escolhas 
+        let cor = "Rosa"
+        switch(cor){
+            case "Azul":
+                console.log("Cor favorita é azul")
+                break
+            case "Rosa":
+                console.log("Cor favorita é rosa")
+                break
+            default:
+                console.log("Sem cor favorita")
+        }
+
+       /// 9. Leitura de informação, Prompt
+        let leitura = prompt("Digite algo:") //prompt normal
+        console.log(leitura)
+
+        let valor = parseFloat(prompt("Informe o preço:")) //prompt limitado à uma tipagem
+        console.log(valor)
+
+    </script>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    
+
+
+</body>
+
+</html>
