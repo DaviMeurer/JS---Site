@@ -13,24 +13,32 @@
         let media = (N1 + N2 + N3) / 3
 
         console.log(media)
-/*
+        alert("Média: "+media)
+
         // Atividade 2
 
         alert("Atividade 2 \nEscreva uma frase.")
         
-        let frase = prompt("Frase: ")
-        for (i=0; i<=frase.length; i++){
-            if fras()
-        }
-     
-        // Atividade 3
-        alert("Atividade 3 \nImpressão Fizbuzz")
-        for (let frase; frase<=100; frase++){
-            switch(i){
-                case frase
+        let frase = prompt("Digite uma frase")
+        let cont_vogais = 0
+        let vogais = ["a","e","i","o","u"]
+
+        for (let i=0; i<frase.length; i++){
+            if(vogais.includes(frase[i].toLowerCase())){
+                cont_vogais++
             }
         }
-*/
+
+        alert("Vogais encontradas: "+cont_vogais)
+     
+        // // Atividade 3
+        // alert("Atividade 3 \nImpressão Fizbuzz")
+        // for (let frase; frase<=100; frase++){
+        //     switch(i){
+        //         case frase
+        //     }
+        // }
+
     </script>
     <title>Atividade 1</title>
 </head>

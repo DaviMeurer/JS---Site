@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+</head>
+
+<body>
+    
+    <button id="meuBotao">
+        Clique aqui
+    </button>
+
+    <input id="mensagem" type="text" placeholder="Mensagem: ">
+    
+    <p id="meuParagrafo">Texto Inicial</p>
+
+    <button id="btAlterar">Alterar</button>
+
+    <script>
+        // DOM é uma represenação da estrutura do documento HTML.
+        // Com o JavaScript, podemos acessar e modificar elementos dessa estrutura,
+
+        function mostraAlerta(){
+            alert("Botão foi clicado!")
+        }
+        function alterarTexto(){
+            // .value captura o conteúdo do elemento
+            let mensagem = document.getElementById("mensagem").value
+            // innerText altera o conteúdo
+            document.getElementById("meuParagrafo").innerText=mensagem
+            // innerHTML altera todo o HTML do elemento
+            document.getElementById("meuParagrafo").innerHTML = "<p id='meuParagrafo' "+" style = 'color: red;'>"+mensagem+"<p>"
+        }
+        document.getElementById("meuBotao").addEventListener("click", mostraAlerta)
+        document.getElementById("btAlterar").addEventListener("click", alterarTexto)
+
+    </script>
+
+</body>
+
+</html>

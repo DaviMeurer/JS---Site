@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade DOM</title>
+    <script>
+
+        function mostrarTexto(){
+            alert("Texto foi mudado!")
+        }
+        
+        function mudarTexto(){
+            let frase = document.getElementById("botaoAlterar").value
+            document.getElementById("textoMudadoAqui").innerText=mensagem
+            document.getElementById("textoMudadoAqui").innerHTML = "<p id='textoMudadoAqui' "+" style = 'color: red'>"+frase+"<p>"
+        }
+        document.getElementById("botaoALterar").addEventListener("click", mostrarTexto)
+        document.getElementById("botaoAlterar").addEventListener("click", mudarTexto)
+
+    </script>
+
+</head>
+
+<body>
+    
+    <p id="textoMudadoAqui">Texto aqui mudará</p>
+
+    <input id="texto" type="text" placeholder="Escreva algo">
+
+    <button id="botaoAlterar">Trocar texto</button>
+
+</body>
+
+</html>
