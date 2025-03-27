@@ -2,36 +2,35 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade DOM</title>
-    <script>
-
-        function mostrarTexto(){
-            alert("Texto foi mudado!")
-        }
-        
-        function mudarTexto(){
-            let frase = document.getElementById("botaoAlterar").value
-            document.getElementById("textoMudadoAqui").innerText=mensagem
-            document.getElementById("textoMudadoAqui").innerHTML = "<p id='textoMudadoAqui' "+" style = 'color: red'>"+frase+"<p>"
-        }
-        document.getElementById("botaoALterar").addEventListener("click", mostrarTexto)
-        document.getElementById("botaoAlterar").addEventListener("click", mudarTexto)
-
-    </script>
-
+    <title>Manipulação do DOM</title>
 </head>
 
 <body>
     
-    <p id="textoMudadoAqui">Texto aqui mudará</p>
+    <p id="textoExibido">O texto aparecerá aqui</p>
+    <input id="campoTexto" type="text" placeholder="Digite algo">
+    <button id="botaoExibir">Exibir Texto</button>
+    <ul id="listaItens"></ul>
+    <button id="botaoAdicionar">Adicionar à Lista</button>
+    
+    <script>
+        function exibirTexto() {
+            let texto = document.getElementById("campoTexto").value;
+            document.getElementById("textoExibido").innerText = texto;
+        }
 
-    <input id="texto" type="text" placeholder="Escreva algo">
+        function adicionarItem() {
+            let texto = document.getElementById("campoTexto").value;
+            let novoItem = document.createElement("li");
+            novoItem.innerHTML = "<strong>Item:</strong> " + texto;
+            document.getElementById("listaItens").appendChild(novoItem);
+        }
 
-    <button id="botaoAlterar">Trocar texto</button>
-
+        document.getElementById("botaoExibir").addEventListener("click", exibirTexto);
+        document.getElementById("botaoAdicionar").addEventListener("click", adicionarItem);
+    </script>
 </body>
 
 </html>
