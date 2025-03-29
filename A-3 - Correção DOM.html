@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <input id="txtNome" type="text" placeholder="Nome"><br>
+    <input id="txtTel" type="tel" placeholder="Número"><br><br>
+    <button id="btSalvar">Salvar</button><br>
+
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+
+        let listaContatos = []
+
+        function salvar(){
+            let nome = document.getElementById("txtNome").value
+            let telefone = document.getElementById("txtTel").value
+
+            document.getElementById("txtNome").value=""
+            document.getElementById("txtTel").value=""
+
+            let contato = {
+                "nome": nome,
+                "telefone": telefone
+            }
+            
+            listaContatos.push(contato)
+            console.log(listaContatos)
+
+            let listaHTML=""
+            for(let i=0; i<listaHTML.length; i++){
+                let nome = listaContatos[i].nome
+                let telefone = listaContatos[i].contato
+                listaHTML += "<li>Nome: "+nome+" - Tel: "+telefone+"</li>"
+            }
+            document.getElementById("lista").innerHTML = listaHTML
+        }
+        document.getElementById("btSalvar").addEventListener("click", salvar)
+
+    </script>    
+
+</body>
+
+</html>

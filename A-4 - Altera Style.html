@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altera Style</title>
+
+    <style>
+
+        #meuElemento{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="meuElemento"></div>
+    <button onclick="alteraEstilo('yellow')">Alterar Estilo</button>
+    <button id="btMostrar" onclick="ocultar()">Ocultar</button>
+
+    <script>
+
+        function ocultar(){
+            if(document.getElementById("meuElemento").style.display=="none"){
+                document.getElementById("meuElemento").style.display="block"
+                document.getElementById("btMostrar").innerText="Ocultar"
+            }else{
+                document.getElementById("meuElemento").style.display="none"
+                document.getElementById("btMostrar").innerText="Mostrar"
+            }
+        }
+
+        function alteraEstilo(cor){
+            let elemento = document.getElementById("meuElemento")
+
+            if(elemento.style.backgroundColor=="yellow" && elemento.style.width=="20%" && elemento.style.borderRadius=="40%"){
+                elemento.style.width=100
+                elemento.style.height=100
+                elemento.style.backgroundColor="blue"
+            }else{
+            elemento.style.backgroundColor=cor
+            elemento.style.width="20%"
+            elemento.style.borderRadius="40%"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
