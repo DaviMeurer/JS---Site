@@ -26,26 +26,28 @@
     <script>
 
         function ocultar(){
-            if(document.getElementById("meuElemento").style.display=="none"){
-                document.getElementById("meuElemento").style.display="block"
-                document.getElementById("btMostrar").innerText="Ocultar"
-            }else{
+            if(document.getElementById("meuElemento").style.display=="block"){
                 document.getElementById("meuElemento").style.display="none"
                 document.getElementById("btMostrar").innerText="Mostrar"
+            }else{
+                document.getElementById("meuElemento").style.display="block"
+                document.getElementById("btMostrar").innerText="Ocultar"
             }
         }
 
         function alteraEstilo(cor){
             let elemento = document.getElementById("meuElemento")
 
-            if(elemento.style.backgroundColor=="yellow" && elemento.style.width=="20%" && elemento.style.borderRadius=="40%"){
-                elemento.style.width=100
-                elemento.style.height=100
-                elemento.style.backgroundColor="blue"
+            if(elemento.style.backgroundColor=="blue"){
+                elemento.style.width="200px"
+                elemento.style.height="200px"
+                elemento.style.backgroundColor="purple"
+                elemento.style.borderRadius="15%"
             }else{
-            elemento.style.backgroundColor=cor
-            elemento.style.width="20%"
-            elemento.style.borderRadius="40%"
+                elemento.style.backgroundColor="blue"
+                elemento.style.width="100px"
+                elemento.style.height="100px"
+                elemento.style.borderRadius=""
             }
         }
 
